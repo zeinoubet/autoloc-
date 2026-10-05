@@ -1,0 +1,6 @@
+package tn.esprit.elabed_zeineb_4cce11.domain;
+
+public enum RoleEmploye {
+    AGENT,
+    MANAGER
+}
