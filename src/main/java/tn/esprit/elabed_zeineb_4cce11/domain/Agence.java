@@ -1,5 +1,6 @@
 package tn.esprit.elabed_zeineb_4cce11.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -41,8 +42,10 @@ public class Agence {
     private String telephone;
 
     @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Vehicule> vehicules = new ArrayList<>();
 
     @OneToMany(mappedBy = "agence", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Employe> employes = new ArrayList<>();
 }

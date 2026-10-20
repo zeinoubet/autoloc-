@@ -1,5 +1,6 @@
 package tn.esprit.elabed_zeineb_4cce11.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -41,5 +42,6 @@ public class Paiement {
     private ModePaiement modePaiement;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference("contrat-paiements")
     private Contrat contrat;
 }
